@@ -28,6 +28,7 @@ class _MakananWidgetState extends State<MakananWidget> {
           autovalidateMode: AutovalidateMode.onUserInteraction,
           decoration: InputDecoration(
               labelText: "Makanan",
+              border: OutlineInputBorder(),
               hintText: "Masukkan Makanan",
               prefixIcon: Icon(Icons.fastfood)),
           validator: (value) {
@@ -46,6 +47,7 @@ class _MakananWidgetState extends State<MakananWidget> {
           autovalidateMode: AutovalidateMode.onUserInteraction,
           decoration: InputDecoration(
               labelText: "Minuman",
+              border: OutlineInputBorder(),
               hintText: "Masukkan Minuman",
               prefixIcon: Icon(Icons.local_drink)),
           validator: (value) {
@@ -64,6 +66,7 @@ class _MakananWidgetState extends State<MakananWidget> {
           autovalidateMode: AutovalidateMode.onUserInteraction,
           decoration: InputDecoration(
               labelText: "Dessert",
+              border: OutlineInputBorder(),
               hintText: "Masukkan Dessert",
               prefixIcon: Icon(Icons.cake)),
           validator: (value) {
@@ -76,7 +79,6 @@ class _MakananWidgetState extends State<MakananWidget> {
         SizedBox(
           height: 20,
         ),
-        
       ],
     );
   }

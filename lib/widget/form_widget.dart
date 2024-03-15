@@ -32,6 +32,7 @@ class _FormWidgetState extends State<FormWidget> {
                 autovalidateMode: AutovalidateMode.onUserInteraction,
                 decoration: InputDecoration(
                     labelText: "Nama",
+                    border: OutlineInputBorder(),
                     hintText: "Masukkan Nama Anda",
                     prefixIcon: Icon(Icons.supervised_user_circle)),
                 validator: (value) {
@@ -52,6 +53,7 @@ class _FormWidgetState extends State<FormWidget> {
               controller: widget.etTelp,
               decoration: InputDecoration(
                   labelText: "No Telepon",
+                  border: OutlineInputBorder(),
                   hintText: "Masukkan Nomor Telepon Anda",
                   prefixIcon: Icon(Icons.phone)),
               inputFormatters: [FilteringTextInputFormatter.digitsOnly],
@@ -74,6 +76,7 @@ class _FormWidgetState extends State<FormWidget> {
               autovalidateMode: AutovalidateMode.onUserInteraction,
               decoration: InputDecoration(
                   labelText: "Alamat",
+                  border: OutlineInputBorder(),
                   hintText: "Masukkan Alamat Anda",
                   prefixIcon: Icon(Icons.location_city)),
               validator: (value) {
@@ -91,6 +94,7 @@ class _FormWidgetState extends State<FormWidget> {
               height: 15,
             ),
             Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text("Sex : "),
                 Row(
@@ -105,6 +109,9 @@ class _FormWidgetState extends State<FormWidget> {
                       },
                     ),
                     Text('Laki-laki'),
+                    SizedBox(
+                      width: 20,
+                    ),
                     Radio<String>(
                       value: 'Perempun',
                       groupValue: selectedGender,
