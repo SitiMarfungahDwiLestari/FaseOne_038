@@ -57,7 +57,7 @@ class _MakananScreenState extends State<MakananScreen> {
         ),
         ElevatedButton(
           onPressed: () {
-            Navigator.pushAndRemoveUntil(
+            Navigator.push(
               context,
               MaterialPageRoute(
                 builder: (context) => DetailScreen(
@@ -68,7 +68,6 @@ class _MakananScreenState extends State<MakananScreen> {
                   dessert: dessert.text,
                 ),
               ),
-              (route) => false,
             );
           },
           child: Text('Submit'),

@@ -35,7 +35,7 @@ class _DataFormState extends State<DataForm> {
                 onPressedNext: () {
                   setState(() {
                     if (formKey.currentState!.validate()) {
-                      Navigator.pushAndRemoveUntil(
+                      Navigator.push(
                         context,
                         MaterialPageRoute(
                           builder: (context) => MakananScreen(
@@ -43,7 +43,6 @@ class _DataFormState extends State<DataForm> {
                             telp: telp.text,
                           ),
                         ),
-                        (route) => false,
                       );
                     }
                   });
