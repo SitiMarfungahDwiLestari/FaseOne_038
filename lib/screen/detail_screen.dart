@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ucp_satu/screen/form_screen.dart';
 
 class DetailScreen extends StatelessWidget {
   final String nama;
@@ -44,7 +45,17 @@ class DetailScreen extends StatelessWidget {
           Text("$dessert"),
           SizedBox(
             height: 50,
-          )
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(builder: (context) => DataForm()),
+                (route) => false,
+              );
+            },
+            child: Text('Finish'),
+          ),
         ],
       ),
     );
